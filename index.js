@@ -50,7 +50,7 @@ const resolvers = {
     date: () => [{
       now:Date(),
       hello: "hello at "+Date()
-    }] 
+    }],
   },
   Mutation: {
     addBook: (root, args) => {
