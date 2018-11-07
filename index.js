@@ -36,6 +36,10 @@ const typeDefs = gql`
     books: [Book]
     date: [Date]
   }
+
+  type Mutation {
+    addBook(title: String, author: String): Book
+  }
 `;
 
 // Resolvers define the technique for fetching the types in the
@@ -47,6 +51,16 @@ const resolvers = {
       now:Date(),
       hello: "hello at "+Date()
     }] 
+  },
+  Mutation: {
+    addBook: (root, args) => {
+        const items = {
+            title: args.title,
+            author: args.author,
+        }
+        books.push(items)
+        return items
+    }
   },
 };
 
