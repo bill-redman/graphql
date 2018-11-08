@@ -1,5 +1,9 @@
 const { ApolloServer, gql } = require('apollo-server');
 
+var db = new loki('loki.json')
+
+var mybooks = db.addCollection('mybooks')
+
 // This is a (sample) collection of books we'll be able to query
 // the GraphQL server for.  A more complete example might fetch
 // from an existing data source like a REST API or database.
@@ -58,7 +62,7 @@ const resolvers = {
             title: args.title,
             author: args.author,
         }
-        books.push(items)
+        mybooks.insert(items)
         return items
     }
   },
