@@ -50,7 +50,7 @@ const typeDefs = gql`
 // schema.  We'll retrieve books from the "books" array above.
 const resolvers = {
   Query: {
-    books: () => books,
+    books: () => mybooks,
     date: () => [{
       now:Date(),
       hello: "hello at "+Date()
