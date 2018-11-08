@@ -36,7 +36,7 @@ const typeDefs = gql`
 
   # The "Query" type is the root of all GraphQL queries.
   type Query {
-    mybooks: [Book]
+    books: [Book]
     date: [Date]
   }
 
