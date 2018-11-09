@@ -16,7 +16,7 @@ const books = [
 
 const db = new loki('books.json',{'autosave':true,'autoload':true,'serializationMethod':'pretty'});
 
-var mybooks = db.addCollection("books");
+var mybooks = db.addCollection('books');
 
 
 // Type definitions define the "shape" of your data and specify
