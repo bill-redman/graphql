@@ -32,7 +32,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    books: [Book]
+    mybooks: [Book]
     date: [Date]
   }
 
@@ -43,7 +43,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    books: () => books,
+    mybooks: () => mybooks,
     date: () => [{
       now:Date(),
       hello: "hello at "+Date()
