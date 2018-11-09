@@ -32,7 +32,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    mybooks: Book
+    mybooks: [Book]
     date: [Date]
   }
 
