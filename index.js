@@ -18,10 +18,6 @@ const db = new loki('books.json',{'autosave':true,'autoload':true,'serialization
 
 var mybooks = db.addCollection("books");
 
-if(mybooks.count() != 0 && mybooks.insert(items)) {
-  console.log("Added books")
-}
-
 
 // Type definitions define the "shape" of your data and specify
 // which ways the data can be fetched from the GraphQL server.
