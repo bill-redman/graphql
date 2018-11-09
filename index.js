@@ -55,7 +55,7 @@ const resolvers = {
             title: args.title,
             author: args.author,
         }
-        books.push(items)
+        mybooks.insert(items)
         return items
     }
   },
