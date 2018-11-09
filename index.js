@@ -1,6 +1,7 @@
 const { ApolloServer, gql } = require('apollo-server');
 
-//var db = new loki('loki.json')
+var loki = require('lokijs');
+db = new loki('loki.json');
 
 //var mybooks = db.addCollection('mybooks')
 
