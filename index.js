@@ -3,7 +3,7 @@ const { ApolloServer, gql } = require('apollo-server');
 var loki = require('lokijs');
 db = new loki('loki.json');
 
-//var mybooks = db.addCollection('mybooks')
+var mybooks = db.addCollection('mybooks');
 
 const books = [
   {
