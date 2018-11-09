@@ -1,9 +1,6 @@
 const { ApolloServer, gql } = require('apollo-server');
 
-var loki = require('lokijs');
-db = new loki('loki.json');
-
-var mybooks = db.addCollection('mybooks');
+const loki = require('lokijs');
 
 const books = [
   {
@@ -15,6 +12,16 @@ const books = [
     author: 'Michael Crichton',
   },
 ];
+
+
+const db = new loki('books.json',{'autosave':true,'autoload':true,'serializationMethod':'pretty'});
+
+var mybooks = db.addCollection("books");
+
+if(mybooks.count() == 0 && mybooks.insert(books)) {
+  console.log("Added books")
+}
+
 
 // Type definitions define the "shape" of your data and specify
 // which ways the data can be fetched from the GraphQL server.
@@ -32,8 +39,8 @@ const typeDefs = gql`
   }
 
   type Query {
-    mybooks: [Book]
-    date: [Date]
+    books: [Book]
+    date: Date
   }
 
   type Mutation {
@@ -43,7 +50,9 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    mybooks: () => [mybooks],
+    books: () => {
+      return (mybooks.find({}));
+    },
     date: () => [{
       now:Date(),
       hello: "hello at "+Date()
@@ -52,10 +61,11 @@ const resolvers = {
   Mutation: {
     addBook: (root, args) => {
         const items = {
-            title: args.title,
-            author: args.author,
-        }
-        mybooks.insert(items)
+            'title': args.title,
+            'author': args.author,
+        };
+        mybooks.insert(items);
+        db.save();
         return items
     }
   },
