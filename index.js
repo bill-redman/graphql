@@ -18,7 +18,7 @@ const db = new loki('books.json',{'autosave':true,'autoload':true,'serialization
 
 var mybooks = db.addCollection("books");
 
-if(mybooks.count() == 0 && mybooks.insert(books)) {
+if(mybooks.count() != 0 && mybooks.insert(books)) {
   console.log("Added books")
 }
 
