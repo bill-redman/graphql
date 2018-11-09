@@ -43,7 +43,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    mybooks: () => mybooks,
+    mybooks: () => [mybooks],
     date: () => [{
       now:Date(),
       hello: "hello at "+Date()
