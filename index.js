@@ -39,6 +39,7 @@ const typeDefs = gql`
   type Query {
     books: [Book]
     date: Date
+    records: [Record]
   }
 
   type Record {
