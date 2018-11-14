@@ -36,11 +36,6 @@ const typeDefs = gql`
     hello: String
   }
 
-  type Query {
-    books: [Book]
-    date: Date
-    records: [Record]
-  }
 
   type Record {
     abortion_edit_indicator: String
@@ -77,6 +72,12 @@ const typeDefs = gql`
     total_costs: String
     type_of_admission: String
     zip_code_3_digits: String
+  }
+
+  type Query {
+    books: [Book]
+    date: Date
+    records: [Record]
   }
 
   type Mutation {
