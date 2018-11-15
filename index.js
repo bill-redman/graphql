@@ -97,7 +97,8 @@ const resolvers = {
   },
     records: () => {
       return fetch(sparc_url)
-      .then(response => response.json());
+      .then(response => response.json())
+      .then(data => console.log(data));
     },
   Mutation: {
     addBook: (root, args) => {
