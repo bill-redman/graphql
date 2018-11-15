@@ -36,7 +36,6 @@ const typeDefs = gql`
     hello: String
   }
 
-
   type Record {
     abortion_edit_indicator: String
     age_group: String
@@ -75,9 +74,9 @@ const typeDefs = gql`
   }
 
   type Query {
+    records: [Record]
     books: [Book]
     date: Date
-    records: [Record]
   }
 
   type Mutation {
@@ -98,7 +97,7 @@ const resolvers = {
     records: () => {
       return fetch(sparc_url)
       .then(response => response.json())
-      .then(data => console.log(data));
+      .then(json => console.log(json));
     },
   Mutation: {
     addBook: (root, args) => {
