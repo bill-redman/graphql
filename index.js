@@ -95,6 +95,10 @@ const resolvers = {
       hello: "hello at "+Date()
     }]
   },
+    records: () => {
+      return fetch(sparc_url)
+      .then(response => response.json());
+    },
   Mutation: {
     addBook: (root, args) => {
         const items = {
