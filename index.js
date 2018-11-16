@@ -95,8 +95,8 @@ const resolvers = {
     }],
     records: () => {
       return fetch(sparc_url)
-      .then(response => response.json())
-      .then(json => console.log(json));
+      .then(response => response.json());
+      //.then(json => console.log(json));
     },
   },
   Mutation: {
