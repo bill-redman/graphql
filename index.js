@@ -74,7 +74,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    records: [Record]
+    records: Record
     books: [Book]
     date: Date
   }
@@ -94,11 +94,11 @@ const resolvers = {
       hello: "hello at "+Date()
     }]
   },
-  //  records: () => {
-  //    return fetch(sparc_url)
-  //    .then(response => response.json())
-  //    .then(json => console.log(json));
-  //  },
+    records: () => {
+      return fetch(sparc_url)
+      .then(response => response.json())
+      .then(json => console.log(json));
+    },
   Mutation: {
     addBook: (root, args) => {
         const items = {
