@@ -36,7 +36,7 @@ const typeDefs = gql`
     hello: String
   }
 
-  type Record {
+  type Record [{
     abortion_edit_indicator: String
     age_group: String
     apr_drg_code: String
@@ -71,10 +71,10 @@ const typeDefs = gql`
     total_costs: String
     type_of_admission: String
     zip_code_3_digits: String
-  }
+  }];
 
   type Query {
-    records: Record
+    records: [Record]
     books: [Book]
     date: Date
   }
