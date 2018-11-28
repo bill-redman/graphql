@@ -94,7 +94,7 @@ const resolvers = {
       hello: "hello at "+Date()
     }],
     records: (root, args) => {
-      return fetch(sparc_url)
+      return fetch(sparc_url+"?"+args.arg1||'')
       .then(response => response.json());
       //.then(json => console.log(json));
     },
