@@ -74,7 +74,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    records: [Record]
+    records(arg1: String): [Record]
     books: [Book]
     date: Date
   }
@@ -93,7 +93,7 @@ const resolvers = {
       now:Date(),
       hello: "hello at "+Date()
     }],
-    records: () => {
+    records: (root, args) => {
       return fetch(sparc_url)
       .then(response => response.json());
       //.then(json => console.log(json));
