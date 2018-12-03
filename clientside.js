@@ -30,7 +30,10 @@ fetch(theurl,
 .then(response => response.json())
 .then(json => {
     var div=document.getElementById('thedata')
-    div.innerHTML = JSON.stringify(json,null,3)
+    div.innerHTML = ''
+    var pre=document.createElement('pre')
+    div.appendChild(pre)
+    pre.innerHTML = JSON.stringify(json,null,3)
 })
 
 }
