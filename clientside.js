@@ -3,7 +3,7 @@ const theurl = "https://brgraphql.herokuapp.com/";
 clientside = function() {
     var arg1 = 
     `{
-        records(arg1:"facility_name=University Hospital&$limit=10") {
+        records(arg1:"${theQuery.value}") {
             facility_name
             gender
             total_charges
