@@ -27,8 +27,11 @@ fetch(theurl,
       }
     }
 )
-.then(response => response.json());
-//.then(json => console.log(json));
+.then(response => response.json())
+.then(json => {
+    var div=document.getElementById('thedata')
+    div.innerHTML = json
+})
 
 }
 
