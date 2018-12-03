@@ -1,9 +1,9 @@
-const theurl = "https://brgraphql.herokuapp.com/"
+const theurl = 'https://brgraphql.herokuapp.com/';
 
 clientside = function() {
     var arg1 = 
-    {
-        records(arg1:"facility_name=University Hospital&$limit=10") {
+    `{
+        records(arg1:'facility_name=University Hospital&$limit=10') {
             facility_name
             gender
             total_charges
@@ -11,7 +11,7 @@ clientside = function() {
             health_service_area
             total_costs
           }
-    }
+    }`
 
 
 data = JSON.stringify({query:arg1})
