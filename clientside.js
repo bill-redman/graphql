@@ -12,6 +12,7 @@ clientside = function() {
             ccs_procedure_description
             health_service_area
             total_costs
+            length_of_stay
             zip_code_3_digits
           }
     }`
