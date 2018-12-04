@@ -6,6 +6,7 @@ clientside = function() {
         records(arg1:"${theQuery.value}") {
             facility_name
             gender
+            age_group
             total_charges
             ccs_diagnosis_description
             ccs_procedure_description
