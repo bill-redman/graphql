@@ -2,7 +2,7 @@ const { ApolloServer, gql } = require('apollo-server');
 const loki = require('lokijs');
 const fetch = require('node-fetch');
 
-const sparc_url = 'https://health.data.ny.gov/resource/gnzp-ekau.json';
+const sparc_url = 'https://health.data.ny.gov/resource/pzzw-8zdv.json';
 
 const books = [
   {

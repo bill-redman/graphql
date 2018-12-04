@@ -8,8 +8,10 @@ clientside = function() {
             gender
             total_charges
             ccs_diagnosis_description
+            ccs_procedure_description
             health_service_area
             total_costs
+            zip_code_3_digits
           }
     }`
 
