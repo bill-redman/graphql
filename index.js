@@ -89,7 +89,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    docinfoq(arg1: String): [DocInfo]
+    docinfoq(arg1: String): DocInfo
     records(arg1: String): [Record]
     books: [Book]
     date: Date
