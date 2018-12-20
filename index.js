@@ -89,7 +89,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    docinfo(arg1: String): [DocInfo]
+    docinfoq(arg1: String): [DocInfo]
     records(arg1: String): [Record]
     books: [Book]
     date: Date
@@ -109,7 +109,7 @@ const resolvers = {
       now:Date(),
       hello: "hello at "+Date()
     }],
-    docinfo: (root, args) => {
+    docinfoq: (root, args) => {
       return fetch("https://api.yext.com/v2/accounts/1277495/locations/"+args.arg1+"?api_key=672bc1867f6117b14d2b0184845c7ddc&v=20181219")
       .then(response => response.json());
       //.then(json => console.log(json));

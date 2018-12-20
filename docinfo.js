@@ -3,7 +3,7 @@ const theurl = "https://brgraphql.herokuapp.com/";
 clientside = function() {
     var arg1 = 
     `{
-        docinfo(arg1:"${theQuery.value}") {
+        docinfoq(arg1:"${theQuery.value}") {
             id
             uid
             accountId
