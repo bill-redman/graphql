@@ -36,6 +36,21 @@ const typeDefs = gql`
     hello: String
   }
 
+  type DocInfo {
+    id: String
+    uid: String
+    accountId: String
+    locationName: String
+    address: String
+    address2: String
+    city: String
+    state: String
+    zip: String
+    countryCode: String
+    language: String
+    phone: String
+  }
+
   type Record {
     abortion_edit_indicator: String
     age_group: String
@@ -74,6 +89,7 @@ const typeDefs = gql`
   }
 
   type Query {
+    docinfo(arg1: String): [DocInfo]
     records(arg1: String): [Record]
     books: [Book]
     date: Date
@@ -93,6 +109,11 @@ const resolvers = {
       now:Date(),
       hello: "hello at "+Date()
     }],
+    docinfo: (root, args) => {
+      return fetch("https://api.yext.com/v2/accounts/1277495/locations/"+args.arg1+"?api_key=672bc1867f6117b14d2b0184845c7ddc&v=20181219")
+      .then(response => response.json());
+      //.then(json => console.log(json));
+    },
     records: (root, args) => {
       return fetch(sparc_url+"?"+args.arg1||'')
       .then(response => response.json());
