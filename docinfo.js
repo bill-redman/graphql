@@ -1,6 +1,6 @@
 const theurl = "https://brgraphql.herokuapp.com/";
 
-clientside = function() {
+docinfo = function() {
     var arg1 = 
     `{
         docinfoq(arg1:"${theQuery.value}") {
@@ -44,4 +44,4 @@ fetch(theurl,
 
 }
 
-docinfoq()
+docinfo()
