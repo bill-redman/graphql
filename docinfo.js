@@ -1,9 +1,9 @@
 const theurl = "https://brgraphql.herokuapp.com/";
 
 docinfo = function() {
-    var arg1 = 
+    var arg2 = 
     `{
-        docinfoq(arg1:"${theQuery.value}") {
+        docinfoq(arg2:"${theQuery.value}") {
             id
             uid
             accountId
@@ -20,7 +20,7 @@ docinfo = function() {
     }`
 
 
-data = JSON.stringify({query:arg1})
+data = JSON.stringify({query:arg2})
 
 fetch(theurl,
     {
