@@ -111,8 +111,9 @@ const resolvers = {
     }],
     docinfoq: (root, args) => {
       return fetch("https://api.yext.com/v2/accounts/1277495/locations/"+args.arg2+"?api_key=672bc1867f6117b14d2b0184845c7ddc&v=20181220")
-      //.then(response => response.json());
-      .then(response => console.log(response.json()));
+      .then(response => response.json())
+      .then(x => (x));
+      //.then(response => console.log(response.json()));
     },
     records: (root, args) => {
       return fetch(sparc_url+"?"+args.arg1||'')
