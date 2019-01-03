@@ -14,6 +14,7 @@ docinfo = function() {
                 postalCode
             }
             localPhone
+            insyranceAccepted
           }
     }`
 

@@ -41,6 +41,7 @@ const typeDefs = gql`
     officeName: String
     address: Location
     localPhone: String
+    insuranceAccepted: String
   }
 
   type Location {
