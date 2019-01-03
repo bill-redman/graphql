@@ -6,12 +6,11 @@ docinfo = function() {
         docinfoq(arg2:"${theQuery.value}") {
             npi
             officeName
-            line1
-            line2
-            city
-            region
-            postalCode
-            languages
+            address.line1
+            address.line2
+            address.city
+            address.region
+            address.postalCode
             localPhone
           }
     }`
