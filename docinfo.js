@@ -6,6 +6,7 @@ docinfo = function() {
         getdocinfo(arg2:"${theQuery.value}") {
             npi
             name
+            degrees
             officeName
             address {
                 line1
@@ -15,6 +16,8 @@ docinfo = function() {
                 postalCode
             }
             localPhone
+            certifications
+            conditionsTreated
             insuranceAccepted
           }
     }`
