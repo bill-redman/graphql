@@ -44,6 +44,7 @@ const typeDefs = gql`
     address: Location
     localPhone: String
     certifications: [String]
+    specialties: [String]
     conditionsTreated: [String]
     insuranceAccepted: [String]
   }

@@ -17,6 +17,7 @@ docinfo = function() {
             }
             localPhone
             certifications
+            specialties
             conditionsTreated
             insuranceAccepted
           }
