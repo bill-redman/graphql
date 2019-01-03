@@ -5,8 +5,6 @@ docinfo = function() {
     `{
         docinfoq(arg2:"${theQuery.value}") {
             npi
-            firstName
-            lastName
             name
             officeName
             address {
