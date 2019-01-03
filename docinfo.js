@@ -3,7 +3,7 @@ const theurl = "https://brgraphql.herokuapp.com/";
 docinfo = function() {
     var arg2 = 
     `{
-        docinfoq(arg2:"${theQuery.value}") {
+        getdocinfo(arg2:"${theQuery.value}") {
             npi
             name
             officeName
