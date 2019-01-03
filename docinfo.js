@@ -14,7 +14,7 @@ docinfo = function() {
                 postalCode
             }
             localPhone
-            insyranceAccepted
+            insuranceAccepted
           }
     }`
 
