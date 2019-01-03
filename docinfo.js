@@ -4,18 +4,15 @@ docinfo = function() {
     var arg2 = 
     `{
         docinfoq(arg2:"${theQuery.value}") {
-            id
-            uid
-            accountId
-            locationName
-            address
-            address2
+            npi
+            officeName
+            line1
+            line2
             city
-            state
-            zip
-            countryCode
-            language
-            phone
+            region
+            postalCode
+            languages
+            localPhone
           }
     }`
 
