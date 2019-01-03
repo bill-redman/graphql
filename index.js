@@ -37,18 +37,15 @@ const typeDefs = gql`
   }
 
   type DocInfo {
-    id: String
-    uid: String
-    accountId: String
-    locationName: String
-    address: String
-    address2: String
-    city: String
-    state: String
-    zip: String
-    countryCode: String
-    language: String
-    phone: String
+    npi: String
+    officeName: String
+    address.line1: String
+    address.line2: String
+    address.city: String
+    address.region: String
+    address.postalCode: String
+    languages: String
+    localPhone: String
   }
 
   type Record {
