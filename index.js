@@ -38,6 +38,9 @@ const typeDefs = gql`
 
   type DocInfo {
     npi: String
+    firstName: String
+    lastName: String
+    name: String
     officeName: String
     address: Location
     localPhone: String
