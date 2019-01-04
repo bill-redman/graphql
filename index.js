@@ -49,7 +49,7 @@ const typeDefs = gql`
     insuranceAccepted: [String]
     educationList: [Education]
     c_Titles: String
-    c_PersoanlStatement: String
+    c_PersonalStatement: String
   }
 
   type Location {
