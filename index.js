@@ -41,7 +41,7 @@ const resolvers = {
       //return fetch("https://api.yext.com/v2/accounts/1277495/entities/"+args.arg2+"?api_key=672bc1867f6117b14d2b0184845c7ddc&v=20181220")
       .then(response => response.json())
       .then(x => (x.response))
-      .then(console.log(x));
+      .then(response => console.log(response.json()));
     },
   },
 };
