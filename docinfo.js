@@ -4,16 +4,18 @@ docinfo = function() {
     var arg2 = 
     `{
         getdocinfo(arg2:"${theQuery.value}") {
-            locations: [
+            locations [
             {
                 npi
                 name
                 degrees
                 officeName
+                address {
                 address
                 city
                 state
                 zip
+                }
                 phone
                 certifications
                 specialities
