@@ -24,8 +24,10 @@ docinfo = function() {
                     institutionName
                     yearCompleted
                 }
-                22884
-                22817
+                customFields {
+                    22884
+                    22817
+                }
             }]
           }
     }`
