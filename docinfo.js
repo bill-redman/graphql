@@ -4,7 +4,6 @@ docinfo = function() {
     var arg2 = 
     `{
         getdocinfo(arg2:"${theQuery.value}") {
-            locations [
             {
                 npi
                 name
@@ -28,7 +27,7 @@ docinfo = function() {
                     property1:{22884}
                     property2:{22817}
                 }
-            }]
+            }
           }
     }`
 
