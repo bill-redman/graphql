@@ -5,7 +5,7 @@ docinfo = function() {
     `{
         getdocinfo(arg2:"${theQuery.value}") {
                 npi
-                name
+                locationName
                 degrees
                 officeName
                 address
