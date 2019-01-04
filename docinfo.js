@@ -4,7 +4,7 @@ docinfo = function() {
     var arg2 = 
     `{
         getdocinfo(arg2:"${theQuery.value}") {
-            Locations [
+            locations [
             {
                 npi
                 name
