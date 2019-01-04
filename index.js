@@ -30,7 +30,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    getdocinfo(arg2: String): DocInfo
+    getdocinfo(arg2: String): [DocInfo]
   }
 `;
 
