@@ -10,12 +10,10 @@ docinfo = function() {
                 name
                 degrees
                 officeName
-                address {
                 address
                 city
                 state
                 zip
-                }
                 phone
                 certifications
                 specialities

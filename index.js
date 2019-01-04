@@ -41,7 +41,10 @@ const typeDefs = gql`
     name: String
     degrees: [String]
     officeName: String
-    address: [Office]
+    address: String
+    city: String
+    state: String
+    zip: String
     phone: String
     certifications: [String]
     specialities: [String]
@@ -49,13 +52,6 @@ const typeDefs = gql`
     insuranceAccepted: [String]
     educationList: [Education]
     customFields: String
-  }
-
-  type Office {
-    address: String
-    city: String
-    state: String
-    zip: String
   }
 
   type Education {
