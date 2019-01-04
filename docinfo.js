@@ -4,29 +4,29 @@ docinfo = function() {
     var arg2 = 
     `{
         getdocinfo(arg2:"${theQuery.value}") {
-            npi
-            name
-            degrees
-            officeName
-            address {
-                line1
-                line2
+            Locations [
+            {
+                npi
+                name
+                degrees
+                officeName
+                address
                 city
-                region
-                postalCode
-            }
-            localPhone
-            certifications
-            specialities
-            conditionsTreated
-            insuranceAccepted
-            educationList {
-                type
-                institutionName
-                yearCompleted
-            }
-            c_Titles
-            c_PersonalStatement
+                state
+                zip
+                phone
+                certifications
+                specialities
+                conditionsTreated
+                insuranceAccepted
+                educationList {
+                    type
+                    institutionName
+                    yearCompleted
+                }
+                22884
+                22817
+            }]
           }
     }`
 

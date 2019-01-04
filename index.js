@@ -41,24 +41,22 @@ const typeDefs = gql`
     name: String
     degrees: [String]
     officeName: String
-    address: Location
+    address: [Location]
     localPhone: String
     certifications: [String]
     specialities: [String]
     conditionsTreated: [String]
     insuranceAccepted: [String]
     educationList: [Education]
-    c_Titles: String
-    c_PersonalStatement: String
+    22884: String
+    22817: String
   }
 
   type Location {
-    line1: String
-    line2: String
-    line3: String
+    address: String
     city: String
-    region: String
-    postalCode: String
+    state: String
+    zip: String
   }
 
   type Education {
@@ -105,7 +103,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    getdocinfo(arg2: String): DocInfo
+    getdocinfo(arg2: String): [DocInfo]
     records(arg1: String): [Record]
     books: [Book]
     date: Date
@@ -126,7 +124,8 @@ const resolvers = {
       hello: "hello at "+Date()
     }],
     getdocinfo: (root, args) => {
-      return fetch("https://api.yext.com/v2/accounts/1277495/entities/"+args.arg2+"?api_key=672bc1867f6117b14d2b0184845c7ddc&v=20181220")
+      return fetch("https://api.yext.com/v2/accounts/1277495/locationsearch?api_key=672bc1867f6117b14d2b0184845c7ddc&v=20181220&filters=[{'npi': {'is': ["+args.arg2+"]}}]")
+      //return fetch("https://api.yext.com/v2/accounts/1277495/entities/"+args.arg2+"?api_key=672bc1867f6117b14d2b0184845c7ddc&v=20181220")
       .then(response => response.json())
       .then(x => (x.response));
       //.then(response => console.log(response.json()));
