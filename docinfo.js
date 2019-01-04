@@ -20,6 +20,13 @@ docinfo = function() {
             specialities
             conditionsTreated
             insuranceAccepted
+            educationList {
+                type
+                institutionName
+                yearCompleted
+            }
+            c_Titles
+            c_PersonalStatement
           }
     }`
 

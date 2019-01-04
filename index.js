@@ -47,6 +47,9 @@ const typeDefs = gql`
     specialities: [String]
     conditionsTreated: [String]
     insuranceAccepted: [String]
+    educationList: [Education]
+    c_Titles: String
+    c_PersoanlStatement: String
   }
 
   type Location {
@@ -56,6 +59,12 @@ const typeDefs = gql`
     city: String
     region: String
     postalCode: String
+  }
+
+  type Education {
+    type: String
+    institutionName: String
+    yearCompleted: String
   }
 
   type Record {
