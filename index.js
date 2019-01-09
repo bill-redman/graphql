@@ -20,13 +20,19 @@ const typeDefs = gql`
     conditionsTreated: [String]
     insuranceAccepted: [String]
     educationList: [Education]
-    customFields: String
+    customFields: Custom
   }
 
   type Education {
     type: String
     institutionName: String
     yearCompleted: String
+  }
+
+  type Custom {
+    type: String
+    custom22884: String
+    custom22817: String
   }
 
   type Query {
