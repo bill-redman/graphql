@@ -4,7 +4,6 @@ docinfo = function() {
     var arg2 = 
     `{
         getdocinfo(arg2:"${theQuery.value}") {
-                locations {
                 npi
                 locationName
                 degrees
@@ -24,7 +23,6 @@ docinfo = function() {
                     yearCompleted
                 }
                 customFields
-            }
           }
     }`
 
