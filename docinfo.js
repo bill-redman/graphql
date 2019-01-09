@@ -22,7 +22,10 @@ docinfo = function() {
                     institutionName
                     yearCompleted
                 }
-                customFields
+                customFields {
+                    custom22884
+                    custom22817
+                }
             }
     }`
 
