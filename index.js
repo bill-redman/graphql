@@ -31,8 +31,8 @@ const typeDefs = gql`
 
   type Custom {
     type: String
-    custom22884: String
-    custom22817: String
+    22884: String
+    22817: String
   }
 
   type Query {
