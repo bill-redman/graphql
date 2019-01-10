@@ -29,6 +29,15 @@ const typeDefs = gql`
     yearCompleted: String
   }
 
+  type DocLocations {
+    officeName: String
+    address: String
+    city: String
+    state: String
+    zip: String
+    phone: String
+  }
+
   type Custom {
     custom22884: String
     custom22817: String
