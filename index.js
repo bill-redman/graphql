@@ -30,7 +30,7 @@ const typeDefs = gql`
   }
 
   type Custom {
-    custom22884: String
+    Titles: String
     custom22817: String
   }
 
