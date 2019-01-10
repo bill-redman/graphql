@@ -15,7 +15,6 @@ const typeDefs = gql`
     state: String
     zip: String
     phone: String
-    loc: [DocLocations]
     certifications: [String]
     specialities: [String]
     conditionsTreated: [String]
