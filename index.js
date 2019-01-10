@@ -16,7 +16,7 @@ const typeDefs = gql`
     zip: String
     phone: String
     certifications: [String]
-    specialities: [String]
+    specialties: [String]
     conditionsTreated: [String]
     insuranceAccepted: [String]
     educationList: [Education]
@@ -29,7 +29,7 @@ const typeDefs = gql`
     yearCompleted: String
   }
 
-  type DocLocations {
+  type DocLocation {
     officeName: String
     address: String
     city: String

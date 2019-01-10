@@ -14,7 +14,7 @@ docinfo = function() {
                 zip
                 phone
                 certifications
-                specialities
+                specialties
                 conditionsTreated
                 insuranceAccepted
                 educationList {
