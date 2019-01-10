@@ -13,6 +13,14 @@ docinfo = function() {
                 state
                 zip
                 phone
+                loc {
+                    officeName
+                    address
+                    city
+                    state
+                    zip
+                    phone 
+                }
                 certifications
                 specialities
                 conditionsTreated
