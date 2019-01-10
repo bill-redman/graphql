@@ -18,6 +18,7 @@ docinfo = function() {
                 conditionsTreated
                 insuranceAccepted
                 educationList {
+                    type
                     institutionName
                     yearCompleted
                 }
