@@ -1,8 +1,6 @@
 const { ApolloServer, gql } = require('apollo-server');
 const fetch = require('node-fetch');
 
-// Type definitions define the "shape" of your data and specify
-// which ways the data can be fetched from the GraphQL server.
 const typeDefs = gql`
 
   type DocInfo {
@@ -29,6 +27,11 @@ const typeDefs = gql`
     yearCompleted: String
   }
 
+  type Custom {
+    custom22884: String,
+    custom22817: String
+  }
+
   type DocLocation {
     officeName: String
     address: String
@@ -36,11 +39,6 @@ const typeDefs = gql`
     state: String
     zip: String
     phone: String
-  }
-
-  type Custom {
-    custom22884: String
-    custom22817: String
   }
 
   type Query {
