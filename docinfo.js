@@ -23,8 +23,8 @@ docinfo = function() {
                     yearCompleted
                 }
                 customFields {
-                    22884
-                    22817
+                    "22884"
+                    "22817"
                 }
             }
     }`
