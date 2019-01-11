@@ -23,8 +23,8 @@ docinfo = function() {
                     yearCompleted
                 }
                 customFields {
-                    property1
-                    property2
+                    custom1
+                    custom2
                 }
             }
     }`
