@@ -28,8 +28,8 @@ const typeDefs = gql`
   }
 
   type Custom {
-    custom22884: String
-    custom22817: String
+    property1: String
+    property2: String
   }
 
   type DocLocation {
