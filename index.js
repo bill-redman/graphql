@@ -18,7 +18,7 @@ const typeDefs = gql`
     conditionsTreated: [String]
     insuranceAccepted: [String]
     educationList: [Education]
-    customFields: Custom
+    customFields: String
   }
 
   type Education {
