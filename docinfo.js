@@ -23,8 +23,8 @@ docinfo = function() {
                     yearCompleted
                 }
                 customFields {
-                    custom1
-                    custom2
+                    Personal Statement
+                    Titles
                 }
             }
     }`
