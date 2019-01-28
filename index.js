@@ -1,5 +1,8 @@
 const { ApolloServer, gql } = require('apollo-server');
 const fetch = require('node-fetch');
+const { GraphQLSchema } = require('graphql');
+
+const typeDefs = gql`
 
 const customType = new GraphQLObjectType({
   name: 'Custom',
@@ -14,8 +17,6 @@ const customType = new GraphQLObjectType({
     }
   }
 })
-
-const typeDefs = gql`
 
   type DocInfo {
     npi: String
