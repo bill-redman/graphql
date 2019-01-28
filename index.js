@@ -27,7 +27,7 @@ const typeDefs = gql`
     yearCompleted: String
   }
 
-  var customType = new graphql.GraphQLObjectType({
+  const customType = new graphql.GraphQLObjectType({
     name: 'Custom',
     fields: {
       PersonalStatement: {
