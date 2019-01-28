@@ -1,6 +1,20 @@
 const { ApolloServer, gql } = require('apollo-server');
 const fetch = require('node-fetch');
 
+const customType = new graphql.GraphQLObjectType({
+  name: 'Custom',
+  fields: {
+    PersonalStatement: {
+      type: graphql.GraphQLString,
+      resolve: (parent) => parent['22817'],
+    },
+    Titles: {
+      type: graphql.GraphQLString,
+      resolve: (parent) => parent['22884']
+    }
+  }
+})
+
 const typeDefs = gql`
 
   type DocInfo {
@@ -26,20 +40,6 @@ const typeDefs = gql`
     institutionName: String
     yearCompleted: String
   }
-
-  const customType = new graphql.GraphQLObjectType({
-    name: 'Custom',
-    fields: {
-      PersonalStatement: {
-        type: graphql.GraphQLString,
-        resolve: (parent) => parent['22817'],
-      },
-      Titles: {
-        type: graphql.GraphQLString,
-        resolve: (parent) => parent['22884']
-      }
-    }
-  })
 
   type DocLocation {
     officeName: String
