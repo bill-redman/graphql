@@ -13,11 +13,11 @@ const CustomType = new GraphQLObjectType({
   fields: {
     PersonalStatement: {
       type: GraphQLString,
-      resolve: (root) => root['22817'],
+      resolve: (getdocinfo) => getdocinfo['22817'],
     },
     Titles: {
       type: GraphQLString,
-      resolve: (root) => root['22884']
+      resolve: (getdocinfo) => getdocinfo['22884']
     }
   }
 });
