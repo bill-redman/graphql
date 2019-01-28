@@ -4,7 +4,7 @@ const { GraphQLSchema } = require('graphql');
 
 const typeDefs = gql`
 
-const customType = new GraphQLObjectType({
+var customType = new GraphQLObjectType({
   name: 'Custom',
   fields: {
     PersonalStatement: {
