@@ -1,10 +1,14 @@
 const { ApolloServer, gql } = require('apollo-server');
 const fetch = require('node-fetch');
-const { GraphQLSchema } = require('graphql');
+const graphql = require('graphql');
+const {
+  GraphQLObjectType,
+  GraphQLString,
+  GraphQLInt,
+  GraphQLSchema
+} = graphql;
 
-const typeDefs = gql`
-
-type = new GraphQLObjectType({
+const CustomType = new GraphQLObjectType({
   name: 'Custom',
   fields: {
     PersonalStatement: {
@@ -16,7 +20,9 @@ type = new GraphQLObjectType({
       resolve: (parent) => parent['22884']
     }
   }
-})
+});
+
+const typeDefs = gql`
 
   type DocInfo {
     npi: String
