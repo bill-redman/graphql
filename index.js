@@ -27,10 +27,19 @@ const typeDefs = gql`
     yearCompleted: String
   }
 
-  type Custom {
-    A22817: String
-    A22884: String
-  }
+  var customType = new graphql.GraphQLObjectType({
+    name: 'Custom',
+    fields: {
+      PersonalStatement: {
+        type: graphql.GraphQLString,
+        resolve: (parent) => parent['22817'],
+      },
+      Titles: {
+        type: graphql.GraphQLString,
+        resolve: (parent) => parent['22884']
+      }
+    }
+  })
 
   type DocLocation {
     officeName: String
