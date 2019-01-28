@@ -42,6 +42,11 @@ const typeDefs = gql`
     customFields: Custom
   }
 
+  type Custom {
+    PersonaslStatement: String
+    Titles: String
+  }
+
   type Education {
     type: String
     institutionName: String
