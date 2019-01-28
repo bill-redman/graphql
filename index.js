@@ -43,7 +43,7 @@ const typeDefs = gql`
   }
 
   type Custom {
-    PersonaslStatement: String
+    PersonalStatement: String
     Titles: String
   }
 
