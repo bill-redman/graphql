@@ -8,18 +8,18 @@ const {
   GraphQLSchema
 } = graphql;
 
-const CustomType = new graphql.GraphQLObjectType({
+const CustomType = new GraphQLObjectType({
   name: 'Custom',
-  fields: {
+  fields: () => ({
     PersonalStatement: {
-      type: graphql.GraphQLString,
-      resolve: (root) => root['22817'],
+      type: GraphQLString,
+      resolve: (custom) => custom['22817']
     },
     Titles: {
-      type: graphql.GraphQLString,
-      resolve: (root) => root['22884']
-    }
-  }
+      type: GraphQLString,
+      resolve: (custom) => custom['22884']
+    },
+  }),
 });
 
 const typeDefs = gql`
