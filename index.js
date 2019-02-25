@@ -10,16 +10,16 @@ const {
 
 const CustomType = new GraphQLObjectType({
   name: 'Custom',
-  fields: () => ({
+  fields: {
     PersonalStatement: {
       type: GraphQLString,
-      resolve: (custom) => custom['22817']
+      resolve: (Custom) => Custom['22817']
     },
     Titles: {
       type: GraphQLString,
-      resolve: (custom) => custom['22884']
-    },
-  }),
+      resolve: (Custom) => Custom['22884']
+    }
+  }
 });
 
 const typeDefs = gql`
